@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/02-POO/03.1-my-module-go" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/03-modulos/03.1-my-module-go" vcs="Git" />
   </component>
 </project>
