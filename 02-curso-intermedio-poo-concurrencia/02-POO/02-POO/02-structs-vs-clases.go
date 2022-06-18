@@ -2,18 +2,18 @@ package main
 
 import "fmt"
 
-type Employee struct {
+type employee struct {
 	id   int
 	name string
 }
 
 func main() {
-	empleado := Employee{
+	empleado := employee{
 		id:   1,
 		name: "Hector Alvarado",
 	}
 
-	empleadoVacio := Employee{}
+	empleadoVacio := employee{}
 
 	fmt.Println(empleado)
 	fmt.Println(empleadoVacio)
