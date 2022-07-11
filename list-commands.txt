@@ -7,7 +7,7 @@ go tool cover -func=coverage.out
 go tool cover -html=coverage.out
 go test -cpuprofile=cpu.out
 go tool pprof cpu.out (dentro de: top, list {nombre funcion}, web, pdf)
-
+go build --race main.go
 
 cuerpo de la funcion
 & = Direccion de memoria
