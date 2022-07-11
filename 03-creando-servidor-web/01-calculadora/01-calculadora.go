@@ -26,10 +26,18 @@ func isNil(err error, operador int) {
 type calc struct {
 }
 
-func (c calc) operate(entrada string, operador string) int {
+func (c calc) operate(entrada string, operador string) (int, error) {
 	entradaLimpia := strings.Split(entrada, operador)
-	operador1 := parseador(entradaLimpia[0])
-	operador2 := parseador(entradaLimpia[1])
+	operador1, err := parseador(entradaLimpia[0])
+
+	if err != nil {
+		return -1, err
+	}
+	operador2, err2 := parseador(entradaLimpia[1])
+
+	if err2 != nil {
+		return -1, err2
+	}
 
 	outputNumber := 0
 	switch operador {
@@ -48,12 +56,15 @@ func (c calc) operate(entrada string, operador string) int {
 	default:
 		fmt.Printf("El operador %s no esta soportado en esta calculadora.", operador)
 	}
-	return outputNumber
+	return outputNumber, nil
 }
 
-func parseador(entrada string) int {
-	operador, _ := strconv.Atoi(entrada)
-	return operador
+func parseador(entrada string) (int, error) {
+	operador, err := strconv.Atoi(entrada)
+	if err != nil {
+		return -1, fmt.Errorf("error formating string to int %v", err)
+	}
+	return operador, nil
 }
 
 func leerEntrada() string {

@@ -7,3 +7,10 @@ go tool cover -func=coverage.out
 go tool cover -html=coverage.out
 go test -cpuprofile=cpu.out
 go tool pprof cpu.out (dentro de: top, list {nombre funcion}, web, pdf)
+
+
+cuerpo de la funcion
+& = Direccion de memoria
+* = Valor
+
+En la declaracion de funciones y variables el * es el puntero(direccion de memoria) de dicha variable.

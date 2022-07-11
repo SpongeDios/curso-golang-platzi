@@ -16,7 +16,7 @@ func main() {
 	otroModulo := 5 % 2
 
 	switch otroModulo {
-	case 0:
+	case 0, 1:
 		fmt.Println("Es par")
 	default:
 		fmt.Println("Es impar")
